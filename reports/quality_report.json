@@ -1,0 +1,157 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-11-16T02:56:18.949926+00:00",
+    "dataset": "customers.csv",
+    "row_count": 5000,
+    "column_count": 6
+  },
+  "overall_status": "FAIL",
+  "validation_summary": {
+    "failed_rules": 11,
+    "total_issues": 11,
+    "severity_summary": {
+      "CRITICAL": 1,
+      "HIGH": 4,
+      "MEDIUM": 6,
+      "LOW": 0
+    }
+  },
+  "profile_summary": {
+    "duplicate_rows": 3,
+    "columns": {
+      "customer_id": {
+        "data_type": "int64",
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "blank_count": 0,
+        "unique_count": 4992,
+        "duplicate_count": 8,
+        "min": 1.0,
+        "max": 5000.0,
+        "mean": 2498.52
+      },
+      "name": {
+        "data_type": "str",
+        "missing_count": 5,
+        "missing_percentage": 0.1,
+        "blank_count": 0,
+        "unique_count": 1821,
+        "duplicate_count": 3178
+      },
+      "email": {
+        "data_type": "str",
+        "missing_count": 6,
+        "missing_percentage": 0.12,
+        "blank_count": 0,
+        "unique_count": 4988,
+        "duplicate_count": 11
+      },
+      "age": {
+        "data_type": "float64",
+        "missing_count": 5,
+        "missing_percentage": 0.1,
+        "blank_count": 0,
+        "unique_count": 70,
+        "duplicate_count": 4929,
+        "min": -4.0,
+        "max": 145.0,
+        "mean": 49.78
+      },
+      "city": {
+        "data_type": "str",
+        "missing_count": 5,
+        "missing_percentage": 0.1,
+        "blank_count": 0,
+        "unique_count": 14,
+        "duplicate_count": 4985
+      },
+      "signup_date": {
+        "data_type": "str",
+        "missing_count": 5,
+        "missing_percentage": 0.1,
+        "blank_count": 0,
+        "unique_count": 1649,
+        "duplicate_count": 3350
+      }
+    }
+  },
+  "issues": [
+    {
+      "column": "customer_id",
+      "rule": "unique",
+      "severity": "CRITICAL",
+      "invalid_count": 16,
+      "message": "16 record(s) contain duplicated values."
+    },
+    {
+      "column": "email",
+      "rule": "unique",
+      "severity": "HIGH",
+      "invalid_count": 12,
+      "message": "12 record(s) contain duplicated values."
+    },
+    {
+      "column": "email",
+      "rule": "required",
+      "severity": "HIGH",
+      "invalid_count": 6,
+      "message": "6 missing value(s) found."
+    },
+    {
+      "column": "email",
+      "rule": "email_format",
+      "severity": "HIGH",
+      "invalid_count": 5,
+      "message": "5 invalid email address(es) found."
+    },
+    {
+      "column": "age",
+      "rule": "range",
+      "severity": "HIGH",
+      "invalid_count": 5,
+      "message": "5 value(s) outside the allowed range 18 to 100."
+    },
+    {
+      "column": "name",
+      "rule": "required",
+      "severity": "MEDIUM",
+      "invalid_count": 5,
+      "message": "5 missing value(s) found."
+    },
+    {
+      "column": "age",
+      "rule": "required",
+      "severity": "MEDIUM",
+      "invalid_count": 5,
+      "message": "5 missing value(s) found."
+    },
+    {
+      "column": "city",
+      "rule": "required",
+      "severity": "MEDIUM",
+      "invalid_count": 5,
+      "message": "5 missing value(s) found."
+    },
+    {
+      "column": "signup_date",
+      "rule": "required",
+      "severity": "MEDIUM",
+      "invalid_count": 5,
+      "message": "5 missing value(s) found."
+    },
+    {
+      "column": "signup_date",
+      "rule": "date_format",
+      "severity": "MEDIUM",
+      "invalid_count": 5,
+      "message": "5 invalid date value(s) found."
+    },
+    {
+      "column": "city",
+      "rule": "allowed_values",
+      "severity": "MEDIUM",
+      "invalid_count": 3,
+      "message": "3 invalid value(s) found."
+    }
+  ]
+}
