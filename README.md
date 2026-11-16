@@ -56,7 +56,12 @@ CSV → SQL → Fabric → Databricks → Automation
 
 
 
+## Run
 
-pip install -r requirements.txt
-python -c "import pandas; print(pandas.__version__)"
-python src/profiling/profiler.py
+1- pip install -r requirements.txt
+
+2- python -c "import pandas; print(pandas.__version__)"
+
+3- python src/profiling/profiler.py
+
+4- python src/validation/validators.py
